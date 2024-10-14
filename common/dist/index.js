@@ -4,12 +4,12 @@ exports.updatePostInput = exports.createPostInput = exports.signinInput = export
 const zod_1 = require("zod");
 exports.signupInput = zod_1.z.object({
     email: zod_1.z.string().email(),
-    password: zod_1.z.string(),
+    password: zod_1.z.string().min(4),
     name: zod_1.z.string().optional()
 });
 exports.signinInput = zod_1.z.object({
     email: zod_1.z.string().email(),
-    password: zod_1.z.string()
+    password: zod_1.z.string().min(4)
 });
 exports.createPostInput = zod_1.z.object({
     title: zod_1.z.string(),

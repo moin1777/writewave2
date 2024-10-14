@@ -12,7 +12,6 @@ export declare const signupInput: z.ZodObject<{
     password: string;
     name?: string | undefined;
 }>;
-export type signupType = z.infer<typeof signupInput>;
 export declare const signinInput: z.ZodObject<{
     email: z.ZodString;
     password: z.ZodString;
@@ -23,7 +22,6 @@ export declare const signinInput: z.ZodObject<{
     email: string;
     password: string;
 }>;
-export type SigninType = z.infer<typeof signinInput>;
 export declare const createPostInput: z.ZodObject<{
     title: z.ZodString;
     content: z.ZodString;
@@ -34,7 +32,6 @@ export declare const createPostInput: z.ZodObject<{
     title: string;
     content: string;
 }>;
-export type CreatePostType = z.infer<typeof createPostInput>;
 export declare const updatePostInput: z.ZodObject<{
     id: z.ZodString;
     title: z.ZodOptional<z.ZodString>;
@@ -48,4 +45,7 @@ export declare const updatePostInput: z.ZodObject<{
     title?: string | undefined;
     content?: string | undefined;
 }>;
+export type signupType = z.infer<typeof signupInput>;
+export type SigninType = z.infer<typeof signinInput>;
+export type CreatePostType = z.infer<typeof createPostInput>;
 export type UpdatePostType = z.infer<typeof updatePostInput>;

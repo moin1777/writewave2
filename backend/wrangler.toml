@@ -3,9 +3,9 @@ main = "src/index.ts"
 compatibility_date = "2024-10-13"
 compatibility_flags = [ "nodejs_compat" ]
 
-[vars]
-DATABASE_URL="your_prisma_accelerate_string"
-JWT_SECRET="your_jwt_secret"
+# [vars]
+# DATABASE_URL="your_prisma_accelerate_string"
+# JWT_SECRET="your_jwt_secret"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
